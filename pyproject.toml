@@ -1,0 +1,24 @@
+[project]
+name = "course-hpc-2627"
+version = "0.1.0"
+description = "Practical work associated with the course"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ipykernel",
+    "pip",
+    "numpy",
+    "scikit-learn",
+    "matplotlib",
+    #"sympkf>=1.0.6",
+    "sympkf",
+    # "experiment", # dedicated package for experiment
+    "omegaconf>=2.3.0",
+    "ipywidgets>=8.1.9",
+    "nbconvert>=7.16.6",
+]
+[tool.uv.sources]
+# experiment = { path = "./package-experiment/", editable = true }
+sympkf = { git = "https://github.com/opannekoucke/sympkf.git", branch = "main" }
+# update as follows:
+# puv lock --upgrade-package sympkf
